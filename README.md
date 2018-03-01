@@ -17,7 +17,7 @@ The algorithm is based on a simple iterative routine:
 
 * average g and x/g to get a new g
 
-* iterate until the difference between g^2 and x is minimized
+* iterate until the difference between new and old g is minimized or until the difference between g^2 and x is minimized  
 
 ## Instructions
 
