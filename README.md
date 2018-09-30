@@ -47,4 +47,4 @@ The script will print the following output:
 
 ## Setting the Convergence Criterion
 
-I have define convergence to be when GUESS^2 is in [X-PRECISION,X+PRECISION]
+I have defined convergence to be when GUESS^2 is in [X-PRECISION,X+PRECISION]
