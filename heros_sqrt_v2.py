@@ -78,5 +78,5 @@ def plot(guess_log,counter_log,x):
      return 0
 
 if __name__ == '__main__':
-     GUESS_LOG,COUNTER_LOG=hero(X,GUESS,ITERATIONS,PRECISION)
+     GUESS_LOG,COUNTER_LOG = hero(X,GUESS,ITERATIONS,PRECISION)
      plot(GUESS_LOG,COUNTER_LOG,X)
