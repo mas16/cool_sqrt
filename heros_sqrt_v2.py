@@ -44,33 +44,32 @@ PRECISION = 0.001
 #function to perform hero's method
 def hero(x,guess,iterations,precision):
      i = 0
-     guess_log,counter_log = [],[]
-     guess_log.append(guess)
-     counter_log.append(i)
-     print 'Inital guess: '+str(guess)+'\n'
+     guess_log = [guess]
+     counter_log = [i]
+     print ('Inital guess: '+str(guess)+'\n')
      #check convergence
      while i <= iterations:
           if x-precision < guess**2 < x+precision:
-               print '\nSolution Found = '+str(guess)
-               print 'Solution Squared = '+str(guess**2)
+               print ('\nSolution Found = '+str(guess))
+               print ('Solution Squared = '+str(guess**2))
                break
           #new guess
           else:
                guess = (guess+(x/guess))/2.0
                guess_log.append(guess)
                counter_log.append(i)
-               print 'New guess '+str(i+1)+': '+str(guess)
+               print ('New guess '+str(i+1)+': '+str(guess))
                i += 1
      return guess_log,counter_log
 
 #visualize results
 def plot(guess_log,counter_log,x):
      correct_sqrt = np.sqrt(x)
-     x_axis = np.linspace(-1,1.1*len(guess_log),len(guess_log))
+     x_axis = np.linspace(-1, 1.1*len(guess_log), len(guess_log))
      y_axis = np.ones(len(guess_log))*correct_sqrt
-     plt.plot(counter_log,guess_log,'ok')
-     plt.plot(x_axis,y_axis,'--r',linewidth=2.0,label='Correct Answer')
-     plt.axis([-1,max(x_axis),-0.1*max(guess_log),1.1*max(guess_log)])
+     plt.plot(counter_log, guess_log,'ok')
+     plt.plot(x_axis, y_axis, '--r', linewidth=2.0, label='Correct Answer')
+     plt.axis([-1, max(x_axis), -0.1*max(guess_log), 1.1*max(guess_log)])
      plt.xlabel('Iterations')
      plt.ylabel('Guess')
      plt.legend(loc = 'upper right')
