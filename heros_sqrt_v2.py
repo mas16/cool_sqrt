@@ -47,8 +47,10 @@ def hero(x,guess,iterations,precision):
      guess_log = [guess]
      counter_log = [i]
      print ('Inital guess: '+str(guess)+'\n')
-     #check convergence
+     #check convergence with while loop to avoid memory limits
+     #for large number of iterations
      while i <= iterations:
+          #this conditional style is supported in Python
           if x-precision < guess**2 < x+precision:
                print ('\nSolution Found = '+str(guess))
                print ('Solution Squared = '+str(guess**2))
