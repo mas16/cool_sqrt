@@ -48,3 +48,9 @@ The script will print the following output:
 ## Setting the Convergence Criterion
 
 I have defined convergence to be when GUESS^2 is in [X-PRECISION,X+PRECISION]
+
+## Example Plot
+An example plot of Guess Value vs Number of Iterations is shown below
+![](./example_plot.png)
+
+All of the details are printed to the console
