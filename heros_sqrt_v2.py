@@ -1,21 +1,22 @@
-'''
-Hero's Method
+"""
+Hero's Method for Calculating square roots.
 
 Cool algorithm to calculate a square root
-Without using sqrt function
+without using sqrt function.
+
 Developed in ancient Babylon by Hero
-Circa the 1st Century AD
+Circa the 1st Century AD.
 
 Hero's method is an interative minimization algorithm:
-Let x be some number you wish to calculate the square root of
-Let g be an initial guess of the sqrt(x) such that g >> sqrt(x)
-x/g will underestimate sqrt(x)
-Therefore the average of g and x/g will be closer to sqrt(x) than
-either g or x
 
-By Matt Stetz
-01/2018
-'''
+Let x be some number you wish to calculate the square root of.
+Let g be an initial guess of the sqrt(x) such that g >> sqrt(x)
+x/g will underestimate sqrt(x).
+Therefore the average of g and x/g will be closer to sqrt(x) than
+either g or x.
+
+By MAS 01/2018
+"""
 
 #####################################
 #Import Libraries
@@ -43,6 +44,9 @@ PRECISION = 0.001
 
 #Function to perform hero's method
 def hero(x, guess, iterations, precision):
+     """Iterate Hero's Formula to calculate square root.
+     Iteration stops once you meet the specified precision.
+     """
      i = 0
      guess_log = [guess]
      counter_log = [i]
@@ -66,6 +70,11 @@ def hero(x, guess, iterations, precision):
 
 #Visualize results
 def plot(guess_log, counter_log, x):
+     """Plot the results.
+     
+     X-Axis -- Iterations
+     Y-Axis -- Square Root Guess ('Guess')
+     """
      correct_sqrt = np.sqrt(x)
      x_axis = np.linspace(-1, 1.1*len(guess_log), len(guess_log))
      y_axis = np.ones(len(guess_log))*correct_sqrt
